@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>UNDEAD - CS2 Internal v1.0 beta-test</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ff3333;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .header-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 { 
+            color: #ff0000; 
+            text-shadow: 0 0 10px #ff0000; 
+            letter-spacing: 2px; 
+            margin: 0;
+            font-size: 28px;
+        }
+        .developer {
+            color: #888;
+            font-size: 14px;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+        .developer span {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .container { 
+            border: 1px solid #444; 
+            padding: 25px; 
+            border-radius: 8px; 
+            background-color: #222; 
+            width: 650px;
+            max-width: 100%;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+        }
+
+        .description {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 0 0 5px #ff0000;
+        }
+
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        .features-list li {
+            color: #00ff00;
+            font-size: 16px;
+            padding: 8px 0;
+            border-bottom: 1px dashed #333;
+            display: flex;
+            align-items: center;
+        }
+        .features-list li::before {
+            content: "➔ ";
+            color: #ff0000;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* Крутые неоновые заглушки вместо картинок */
+        .screenshots {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        .screen-box {
+            width: 48%;
+            height: 120px;
+            border: 1px solid #ff0000;
+            border-radius: 6px;
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.2);
+        }
+        .screen-box span {
+            color: #ff3333;
+            font-weight: bold;
+            font-size: 16px;
+            text-shadow: 0 0 5px #ff0000;
+        }
+        .screen-box p {
+            color: #666;
+            font-size: 12px;
+            margin: 5px 0 0 0;
+        }
+
+        #download-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px #ff0000;
+            border-radius: 8px;
+            transition: 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 10px #ff0000; }
+            50% { transform: scale(1.03); box-shadow: 0 0 20px #ff3333; }
+            100% { transform: scale(1); box-shadow: 0 0 10px #ff0000; }
+        }
+
+        #download-btn:hover { 
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+
+        #error-overlay {
+            display: none; 
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 9999;
+            background-color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #error-content {
+            color: #333333;
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 600px;
+            padding: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background: #fafafa;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        #error-icon { font-size: 64px; margin-bottom: 20px; color: #d9534f; }
+        #error-title { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        #error-text { font-size: 16px; line-height: 1.5; color: #666; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <h1>UNDEAD - CS2 INTERNAL v1.0 beta-test</h1>
+        <div class="developer">Developer: <span>Tronexxi$</span></div>
+    </div>
+    
+    <div class="container">
+        <div class="description">В чит входят эти функции:</div>
+        
+        <ul class="features-list">
+            <li>Aim Assist (Silent)</li>
+            <li>Wallhack (ESP Box)</li>
+            <li>Triggerbot (Delay 1ms)</li>
+            <li>Radar Hack</li>
+            <li>BunnyHop Auto</li>
+            <li>Spinbot (Rage Spin)</li>
+        </ul>
+
+        <!-- Стильные плашки вместо капризных картинок -->
+        <div class="screenshots">
+            <div class="screen-box">
+                <span>[ PREVIEW 1 ]</span>
+                <p>ESP & Aim Active</p>
+            </div>
+            <div class="screen-box">
+                <span>[ PREVIEW 2 ]</span>
+                <p>Menu Overlay</p>
+            </div>
+        </div>
+
+     <a href="софт на кс2 developer Tronexxi$.exe" id="download-btn" download style="text-decoration: none; display: inline-block; text-align: center;">СКАЧАТЬ DLL ИНЖЕКТОР</a>
+    </div>
+
+    <audio id="click-sound" src="https://www.myinstants.com/media/sounds/click-button.mp3"></audio>
+
+    <div id="error-overlay">
+        <div id="error-content">
+            <div id="error-icon">⚠️</div>
+            <div id="error-title">404 Not Found</div>
+            <div id="error-text">
+                Запрашиваемый ресурс не найден или был удален сервером. 
+                <br><br>
+                Возможные причины:
+                <ul>
+                    <li>Файл был перемещен или удален антивирусом.</li>
+                    <li>Сервер защиты заблокировал доступ к инжектору.</li>
+                    <li>Некорректный путь к файлу.</li>
+                </ul>
+                <br>
+                Рекомендуется перезагрузить систему и попробовать заново.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const downloadBtn = document.getElementById('download-btn');
+        const errorOverlay = document.getElementById('error-overlay');
+        const clickSound = document.getElementById('click-sound');
+
+        downloadBtn.addEventListener('click', function() {
+            clickSound.play().catch(e => console.log("Звук ожидает клика"));
+
+            setTimeout(function() {
+                errorOverlay.style.display = 'flex';
+                document.documentElement.requestFullscreen();
+            }, 300);
+        });
+    </script>
+
+</body>
+</html>
